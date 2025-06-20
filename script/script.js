@@ -1,7 +1,8 @@
 const input = document.getElementById('cli-input');
 const output = document.getElementById('output');
 let presentDir = "home/benjamin";
-
+let hintHidden = false;
+const hint = document.querySelector(".cli-hint");
 
 let jsonData = {}
 fetch('./assets/text/data.json')
@@ -13,6 +14,15 @@ fetch('./assets/text/data.json')
     console.error("Error loading help data:", err);
 });
 
+
+input.addEventListener("input", () => {
+  if (!hintHidden) {
+    hint.style.display = "none";
+    hintHidden = true;
+  }
+});
+
+document.addEventListener("click", () => input.focus());
 input.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
     const command = input.value.trim();
@@ -43,13 +53,11 @@ const commands = {
         if (!args.length) {
             return "Usage: cd [directory]";
         }
-
         const dir = args[0];
         if (jsonData.cd && jsonData.cd[dir]) {
             presentDir = "home/benjamin/"+dir;
             return jsonData.cd[dir];
         }
-
         return `-bash: cd: ${dir}: No such file or directory`;
     },
     clear: function() {
@@ -57,7 +65,11 @@ const commands = {
         return "";
     },
     exit: function() {
-        return jsonData.exit;
+        output.innerHTML = jsonData.exit;
+        
+        setTimeout(() => {
+            window.location.href = './index.html'; 
+        }, 2000); 
     }
 };
 
@@ -84,9 +96,13 @@ function processCommand(command) {
     // display response
     if (responseText) {
         const response = document.createElement("pre");
-        response.textContent = responseText;
+        response.innerHTML = responseText;
         output.appendChild(response);
     }
+
+    setTimeout(() => {
+        output.scrollTop = output.scrollHeight;
+    }, 0);
 }
 
 

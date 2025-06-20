@@ -1,22 +1,16 @@
 <div id="terminal">
   <div id="output"></div>
   <div class="prompt">
-    <span>[portfolio@benjamin ~]$ </span>
-    <input type="text" id="cli-input" autofocus />
+    <span>[portfolio@benjamin ~]$</span>
+    <span class="cli-hint">type 'help' for options</span>
+    <div id="input-container">
+      <input type="text" id="cli-input" autofocus autocomplete="off" />
+    </div>
   </div>
 </div>
 
+
 <script src="./script/script.js"></script>
 
-<style>
-    .prompt span {
-        font-family: monospace;
-        white-space: pre;
-        /* color: #00ff00; */
-    }
-    #cli-input {
-        outline:none;
-        border: none;
-        background: transparent;
-    }
-</style>
+<link rel="stylesheet" href="./styles/cli.css">
+

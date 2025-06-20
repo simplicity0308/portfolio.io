@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #ffffff;
+    font-family: monospace;
+}
+
+#terminal {
+    height: 100vh;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#output {
+    white-space: pre-wrap;
+    max-height: calc(100vh - 3rem); 
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#output::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+}
+
+#terminal::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+}
+
+#output a {
+    color: #00ff00;
+    text-decoration: underline;
+    font-family: monospace;
+}
+
+#output a:hover {
+    text-decoration: none;
+}
+
+.prompt {
+    display: flex;
+    align-items: center;
+}
+
+.prompt span {
+    white-space: pre;
+}
+
+#input-container {
+    position: relative;
+    flex: 1;
+}
+
+#cli-input {
+    color: #ffffff;
+    font-family: monospace;
+    font-size: 1rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.cli-hint {
+  color: #7b7b7b;
+  font-style: italic;
+  opacity: 0.8;
+}
