@@ -15,6 +15,13 @@ body {
     scrollbar-width: none;
 }
 
+#input hover{
+    align-items: center;
+    justify-content: left;
+    padding: 4px;
+
+}
+
 #output {
     white-space: pre-wrap;
     max-height: calc(100vh - 3rem); 
@@ -28,7 +35,7 @@ body {
 }
 
 #terminal::-webkit-scrollbar {
-    display: none;  /* Chrome, Safari and Opera */
+    display: none;  
 }
 
 #output a {

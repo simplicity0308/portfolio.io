@@ -1,11 +1,11 @@
 {
     "help": {
         "default": "Portfolio, version 1.0 - release (x86_69-wimdows)\nType help [command] to find out more\n\nAvailable commands:\n cd \n pwd \n ls \n clear \n exit",
-        "cd": "cd [directory]          change current working directory",
-        "pwd": "pwd          present working directory",
-        "ls": "ls           show available directories",
-        "clear": "clear       clear the screen", 
-        "exit": "exit        exit cli interface"
+        "cd": "cd [directory]      display different information about me",
+        "pwd": "pwd                 present working directory",
+        "ls": "ls                 show available directories",
+        "clear": "clear                 clear the screen and reset state", 
+        "exit": "exit                 exit cli interface and redirect to index"
     },
     "cd": {
         "about": "Hi, I'm Benjamin Choon \n\n I'm a junior full-stack developer currently working in a full-stack role where I'm focused on strengthening my backend skills \n\n and mastering modern frameworks. I'm passionate about building efficient, scalable web applications and continuously learning new \n\n technologies to improve my productivity and value as a developer. \n\n\n To contact me, please run: \n      cd contact",

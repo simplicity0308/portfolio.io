@@ -41,6 +41,8 @@ const commands = {
         const subCommand = args[0];
         if(jsonData.help[subCommand] ) {
             return jsonData.help[subCommand];
+        } else {
+            return `-bash: help: no help topics match '${subCommand}'. Try 'help'`
         }
     },
     pwd: function() {
@@ -62,6 +64,7 @@ const commands = {
     },
     clear: function() {
         output.innerHTML = "";
+        presentDir = 'home/benjamin'
         return "";
     },
     exit: function() {
