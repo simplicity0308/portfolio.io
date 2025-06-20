@@ -1,0 +1,20 @@
+{
+    "help": {
+        "default": "Portfolio, version 1.0 - release (x86_69-wimdows)\nType help [command] to find out more\n\nAvailable commands:\n cd \n pwd \n ls \n clear \n exit",
+        "cd": "cd [directory]          change current working directory",
+        "pwd": "pwd          present working directory",
+        "ls": "ls           show available directories",
+        "clear": "clear       clear the screen", 
+        "exit": "exit        exit cli interface"
+    },
+    "cd": {
+        "about": "xxx",
+        "contact": "xxx",
+        "linkedin": "xxx",
+        "github": "xxx",
+        "projects": "xxx",
+        "suiseikyoumoukawaii": "xxx"
+    },
+    "ls": "about\n\ncontact\n\nlinkedin\n\ngithub\n\nprojects\n\nsuiseikyoumoukawaii",
+    "exit": "console terminated \n session ended"
+}
