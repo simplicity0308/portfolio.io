@@ -5,7 +5,7 @@ let hintHidden = false;
 const hint = document.querySelector(".cli-hint");
 
 let jsonData = {}
-fetch('./assets/text/data.json')
+fetch('../assets/text/data.json')
   .then(res => res.json())
   .then(data => {
     jsonData = data;
