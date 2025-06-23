@@ -4,8 +4,11 @@ let presentDir = "home/benjamin";
 let hintHidden = false;
 const hint = document.querySelector(".cli-hint");
 
+const baseUrl = window.location.hostname.includes('github.io') ? 
+                '/portfolio' : '';
+
 let jsonData = {}
-fetch('/portfolio/assets/text/data.json')
+fetch(`${baseUrl}/assets/text/data.json`)
   .then(res => res.json())
   .then(data => {
     jsonData = data;
