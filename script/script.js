@@ -9,16 +9,7 @@ const baseUrl = window.location.hostname.includes('github.io') ?
 
 let jsonData = {}
 
-let fetchPath;
-if (window.location.hostname.includes('github.io')) {
-  // On GitHub Pages
-  fetchPath = '/portfolio/assets/text/data.json';
-} else {
-  // Local development - since script is loaded from /views/cli.html, need to go up one directory
-  fetchPath = '../assets/text/data.json';
-}
-
-fetch(fetchPath)
+fetch('/portfolio/assests/text/data.json')
   .then(res => {
     if (!res.ok) {
       throw new Error(`HTTP error! Status: ${res.status}`);
