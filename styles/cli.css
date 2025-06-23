@@ -64,14 +64,18 @@ body {
 
 #cli-input {
     color: #ffffff;
-    font-family: monospace;
-    font-size: 1rem;
     background: transparent;
     border: none;
     outline: none;
     width: 100%;
     position: relative;
     z-index: 1;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+
 }
 
 .cli-hint {
