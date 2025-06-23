@@ -6,7 +6,7 @@ const hint = document.querySelector(".cli-hint");
 
 let jsonData = {}
 
-fetch('/portfolio/assets/text/data.json')
+fetch('../assets/text/data.json')
   .then(res => {
     if (!res.ok) {
       throw new Error(`HTTP error! Status: ${res.status}`);
@@ -19,7 +19,6 @@ fetch('/portfolio/assets/text/data.json')
   })
   .catch(err => {
     console.error("Error loading data:", err);
-    // Provide fallback data if fetch fails
     jsonData = {
       help: {
         default: "Help data failed to load. Please check console for errors."
