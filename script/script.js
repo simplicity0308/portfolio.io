@@ -8,15 +8,36 @@ const baseUrl = window.location.hostname.includes('github.io') ?
                 '/portfolio' : '';
 
 let jsonData = {}
-fetch(`${baseUrl}/assets/text/data.json`)
-  .then(res => res.json())
-  .then(data => {
-    jsonData = data;
-})
-  .catch(err => {
-    console.error("Error loading help data:", err);
-});
 
+let fetchPath;
+if (window.location.hostname.includes('github.io')) {
+  // On GitHub Pages
+  fetchPath = '/portfolio/assets/text/data.json';
+} else {
+  // Local development - since script is loaded from /views/cli.html, need to go up one directory
+  fetchPath = '../assets/text/data.json';
+}
+
+fetch(fetchPath)
+  .then(res => {
+    if (!res.ok) {
+      throw new Error(`HTTP error! Status: ${res.status}`);
+    }
+    return res.json();
+  })
+  .then(data => {
+    console.log("Data loaded successfully");
+    jsonData = data;
+  })
+  .catch(err => {
+    console.error("Error loading data:", err);
+    // Provide fallback data if fetch fails
+    jsonData = {
+      help: {
+        default: "Help data failed to load. Please check console for errors."
+      }
+    };
+  });
 
 input.addEventListener("input", () => {
   if (!hintHidden) {
