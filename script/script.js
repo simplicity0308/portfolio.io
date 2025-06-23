@@ -4,12 +4,9 @@ let presentDir = "home/benjamin";
 let hintHidden = false;
 const hint = document.querySelector(".cli-hint");
 
-const baseUrl = window.location.hostname.includes('github.io') ? 
-                '/portfolio' : '';
-
 let jsonData = {}
 
-fetch('/portfolio/assests/text/data.json')
+fetch('/portfolio/assets/text/data.json')
   .then(res => {
     if (!res.ok) {
       throw new Error(`HTTP error! Status: ${res.status}`);
