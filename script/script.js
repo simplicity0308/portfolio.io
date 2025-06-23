@@ -74,7 +74,9 @@ const commands = {
         output.innerHTML = jsonData.exit;
         
         setTimeout(() => {
-            window.location.href = './index.html'; 
+            const baseUrl = window.location.hostname.includes('github.io') ? 
+                        '/portfolio' : '';
+            window.location.href = `${baseUrl}/index.html`; 
         }, 2000); 
     }
 };
