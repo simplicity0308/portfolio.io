@@ -122,3 +122,57 @@ function processCommand(command) {
 }
 
 
+
+
+
+//overlay
+document.addEventListener('DOMContentLoaded', function() {
+  
+  const overlays = {
+    about: document.getElementById('about-overlay'),
+    contact: document.getElementById('contact-overlay'),
+    projects: document.getElementById('projects-overlay')
+  };
+  
+  const icons = {
+    about: document.querySelector('.icon.about'),
+    contact: document.querySelector('.icon.contact'),
+    projects: document.querySelector('.icon.projects')
+  };
+  
+  Object.keys(icons).forEach(type => {
+    if (icons[type] && overlays[type]) {
+
+      icons[type].addEventListener('click', function(e) {
+        e.preventDefault();
+        Object.values(overlays).forEach(overlay => {
+          if (overlay) overlay.style.display = 'none';
+        });
+        overlays[type].style.display = 'block';
+      });
+      
+      const closeBtn = overlays[type].querySelector('.control.close');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', function() {
+          overlays[type].style.display = 'none';
+        });
+      }
+      
+      overlays[type].addEventListener('click', function(event) {
+        if (event.target === overlays[type]) {
+          overlays[type].style.display = 'none';
+        }
+      });
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      Object.values(overlays).forEach(overlay => {
+        if (overlay && overlay.style.display === 'block') {
+          overlay.style.display = 'none';
+        }
+      });
+    }
+  });
+});

@@ -1,11 +1,10 @@
 {
     "help": {
-        "default": "Portfolio, version 1.0 - release (x86_69-wimdows)\nType help [command] to find out more\n\nAvailable commands:\n cd \n pwd \n ls \n clear \n exit",
+        "default": "Portfolio, version 1.0 - release (x86_69-wimdows)\nType help [command] to find out more\n\nAvailable commands:\n cd \n pwd \n ls \n clear",
         "cd": "cd [directory]      display different information about me",
         "pwd": "pwd                 present working directory",
         "ls": "ls                 show available directories",
-        "clear": "clear                 clear the screen and reset state", 
-        "exit": "exit                 exit cli interface and redirect to index"
+        "clear": "clear                 clear the screen and reset state"
     },
     "cd": {
         "about": "Hi, I'm Benjamin Choon \n\n I'm a junior full-stack developer currently working in a full-stack role where I'm focused on strengthening my backend skills \n\n and mastering modern frameworks. I'm passionate about building efficient, scalable web applications and continuously learning new \n\n technologies to improve my productivity and value as a developer. \n\n\n To contact me, please run: \n      cd contact",
@@ -15,8 +14,7 @@
         "projects": "xxx",
         "suisei": "<a href ='https://www.youtube.com/watch?v=a51VH9BYzZA' target='blank'>Click Me</a>"
     },
-    "ls": "about\n\ncontact\n\nlinkedin\n\ngithub\n\nprojects\n\nsuisei",
-    "exit": "console terminated \nsession ended\nredirecting. . ."
+    "ls": "about\n\ncontact\n\nlinkedin\n\ngithub\n\nprojects\n\nsuisei"
 }
 
 
