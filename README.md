@@ -6,6 +6,9 @@ Work In Progress
 ###### Access via:
 > https://simplicity0308.github.io/portfolio.io/
 
+###### Tech Stack:
+> HTML, CSS, JavaScript
+
 This project features a mockup of a classic Windows XP interface, complete with a command-line interface (CLI) window.  
 If you're not familiar with Bash, you can type `help` in the CLI to get guidance. Alternatively, click the desktop icons for a more user-friendly navigation experience.
 

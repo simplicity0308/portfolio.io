@@ -131,13 +131,13 @@ document.addEventListener('DOMContentLoaded', function() {
   const overlays = {
     about: document.getElementById('about-overlay'),
     contact: document.getElementById('contact-overlay'),
-    projects: document.getElementById('projects-overlay')
+    // projects: document.getElementById('projects-overlay')
   };
   
   const icons = {
     about: document.querySelector('.icon.about'),
     contact: document.querySelector('.icon.contact'),
-    projects: document.querySelector('.icon.projects')
+    // projects: document.querySelector('.icon.projects')
   };
   
   Object.keys(icons).forEach(type => {

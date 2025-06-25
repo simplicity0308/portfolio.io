@@ -11,7 +11,7 @@
         "contact": "Email: <a>benjaminchoon03@gmail.com</a> \n\n To find me on linkedin or github, run: \n     cd linkedin \n or \n     cd github",
         "linkedin": "<a href ='https://github.com/simplicity0308' target='blank'>Click Me</a>",
         "github": "<a href ='https://github.com/simplicity0308' target='blank'>Click Me</a>",
-        "projects": "xxx",
+        "projects": "<a href='../views/projects.html' target='blank'>Click Me</a>",
         "suisei": "<a href ='https://www.youtube.com/watch?v=a51VH9BYzZA' target='blank'>Click Me</a>"
     },
     "ls": "about\n\ncontact\n\nlinkedin\n\ngithub\n\nprojects\n\nsuisei"
