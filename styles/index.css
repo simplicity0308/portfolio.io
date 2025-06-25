@@ -1,0 +1,119 @@
+body {
+        margin: 0;
+        padding: 0;
+        background-image: linear-gradient(to bottom, #235bdb, #6088e0, #91b9fe);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: 'Tahoma', sans-serif;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        color: white;
+    }
+
+    .header {
+        text-align: center;
+        padding-bottom: 1%;
+    }
+
+    .header h1 {
+        font-size: 28px;
+        font-weight: normal;
+        margin-bottom: 5px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+    }
+
+    .user-icon {
+        width: 140px;
+        height: 180px;
+        align-items: center;
+        background-image: url("../assets/img/photo.jpg");
+        background-size: cover;
+        border: 3px solid white;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        margin-bottom: 15px;
+    }
+
+    .user-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .input-field {
+        background-color: white;
+        border: 1px solid #7eb4ea;
+        border-radius: 3px;
+        padding: 5px 10px;
+        width: 250px;
+        margin-bottom: 15px;
+        font-family: 'Tahoma', sans-serif;
+    }
+
+    .login-button {
+        background-image: linear-gradient(to bottom, #73b9f1, #2573d5);
+        color: white;
+        border: 1px solid #2461bf;
+        border-radius: 3px;
+        padding: 5px 15px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .login-button:hover {
+        background-image: linear-gradient(to bottom, #85c3f2, #3080d5);
+    }
+
+    .option-button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        text-decoration: underline;
+        cursor: pointer;
+        margin-top: 10px;
+        font-size: 12px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 15px;
+    }
+
+    .footer-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .win-logo {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        background-image: url('./assets/img/wimdows.jpg');
+        background-size: cover;
+        border-radius: 50%;
+    }
+
+    .footer-text {
+        font-size: 12px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    }
