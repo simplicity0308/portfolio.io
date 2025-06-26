@@ -486,7 +486,7 @@ a {
     display: flex;
     flex-direction: column;
     padding: 8px;
-    border-bottom: 1px solid #E5E5E5;
+    border-bottom: 1px solid #dad8d8;
     cursor: default;
 }
 
