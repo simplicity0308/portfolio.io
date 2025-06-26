@@ -84,14 +84,11 @@ const commands = {
         presentDir = 'home/benjamin'
         return "";
     },
-    exit: function() {
-        output.innerHTML = jsonData.exit;
-        
+    exit: function() {       
+      alert("Session terminated, hope you enjoyed :3")
         setTimeout(() => {
-            const baseUrl = window.location.hostname.includes('github.io') ? 
-                        '/portfolio' : '';
-            window.location.href = `${baseUrl}/index.html`; 
-        }, 2000); 
+          window.close();
+        }, 1000); 
     }
 };
 
