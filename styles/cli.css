@@ -157,8 +157,8 @@ body {
 }
 
 .icon {
-    width: 80px;
-    height: 65px;
+    width: 60px;
+    height: 45px;
     margin: 2px;
     margin-bottom: 20px;
     padding-top: 5px;
@@ -664,4 +664,10 @@ a {
 .project-badge {
     margin:2px;
     border: 1px solid #a2a1a1;
+}
+
+.interest-badge {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    padding:1px;
 }
