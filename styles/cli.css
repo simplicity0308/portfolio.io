@@ -503,8 +503,8 @@ a {
 }
 
 .project-icon {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     background-image: url('../assets/img/folder.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -519,19 +519,19 @@ a {
 
 .project-name {
     font-weight: bold;
-    font-size: 12px;
+    font-size: 18px;
     color: black;
 }
 
 .project-description {
-    font-size: 11px;
+    font-size: 14px;
     color: #555;
 }
 
 .project-date {
     margin-left: auto;
-    margin-right: 15px;
-    font-size: 11px;
+    margin-right: 10px;
+    font-size: 13px;
     color: #777;
     align-self: center;
 }
@@ -545,11 +545,11 @@ a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    background-color: #ECE9D8; 
+    background-color: #fefcf3; 
     color: #333;
     padding: 4px 8px;
     border-radius: 3px;
-    border: 1px solid #ACA899; 
+    border: 1px solid #c9c5b5; 
 }
 
 .github-div a:hover {
@@ -662,7 +662,6 @@ a {
 }
 
 .project-badge {
-    padding: 0.09em;
     margin:2px;
     border: 1px solid #a2a1a1;
 }

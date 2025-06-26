@@ -7,11 +7,11 @@
         "clear": "\nclear                 clear the screen and reset state\n"
     },
     "cd": {
-        "about": "\nHi, I'm Benjamin Choon \n\n I'm a junior full-stack developer currently working in a full-stack role where I'm focused on strengthening my backend skills \n\n and mastering modern frameworks. I'm passionate about building efficient, scalable web applications and continuously learning new \n\n technologies to improve my productivity and value as a developer. \n\n\n To contact me, please run: \n      cd contact \n\n Or click here: <a href=\"#about\">Open About Me</a> \n",
-        "contact": "\nEmail: <a href=\"mailto:benjaminchoon03@gmail.com\">benjaminchoon03@gmail.com</a> \n\n To find me on linkedin or github, run: \n     cd linkedin \n or \n     cd github \n\n Or click here: <a href=\"#contact\">Open Contact Window</a>\n",
+        "about": "\nHi, I'm Benjamin Choon \n\n I'm a junior full-stack developer currently working in a full-stack role where I'm focused on strengthening my backend skills \n\n and mastering modern frameworks. I'm passionate about building efficient, scalable web applications and continuously learning new \n\n technologies to improve my productivity and value as a developer. \n\n\n To contact me, please run: \n      cd contact \n\n Or click here to learn more: <a href=\"#about\">Open About Me</a> \n",
+        "contact": "\nEmail: <a href=\"mailto:benjaminchoon03@gmail.com\">benjaminchoon03@gmail.com</a> \n\n To find me on linkedin or github, run: \n     cd linkedin \n or \n     cd github \n",
         "linkedin": "\n<a href ='https://github.com/simplicity0308' target='blank'>Click Me</a>\n",
         "github": "\n<a href ='https://github.com/simplicity0308' target='blank'>Click Me</a>\n",
-        "projects": "\n<a href='../views/projects.html' target='blank'>Click Me</a> \n\n Or click here: <a href=\"#projects\">Open Projects Window</a>\n",
+        "projects": "\n<a href=\"#projects\">Click Me</a>\n",
         "suisei": "\n<a href ='https://www.youtube.com/watch?v=a51VH9BYzZA' target='blank'>Click Me</a>\n"
     },
     "ls": "\nabout\n\ncontact\n\nlinkedin\n\ngithub\n\nprojects\n\nsuisei\n"
