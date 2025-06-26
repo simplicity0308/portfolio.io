@@ -1,20 +1,20 @@
 {
     "help": {
-        "default": "Portfolio, version 1.0 - release (x86_69-wimdows)\nType help [command] to find out more\n\nAvailable commands:\n cd \n pwd \n ls \n clear",
-        "cd": "cd [directory]      display different information about me",
-        "pwd": "pwd                 present working directory",
-        "ls": "ls                 show available directories",
-        "clear": "clear                 clear the screen and reset state"
+        "default": "\nPortfolio, version 1.0 - release (x86_69-wimdows)\nType help [command] to find out more\n\nAvailable commands:\n cd \n pwd \n ls \n clear\n",
+        "cd": "\ncd [directory]      display different information about me\n",
+        "pwd": "\npwd                 present working directory\n",
+        "ls": "\nls                 show available directories\n",
+        "clear": "\nclear                 clear the screen and reset state\n"
     },
     "cd": {
-        "about": "Hi, I'm Benjamin Choon \n\n I'm a junior full-stack developer currently working in a full-stack role where I'm focused on strengthening my backend skills \n\n and mastering modern frameworks. I'm passionate about building efficient, scalable web applications and continuously learning new \n\n technologies to improve my productivity and value as a developer. \n\n\n To contact me, please run: \n      cd contact",
-        "contact": "Email: <a>benjaminchoon03@gmail.com</a> \n\n To find me on linkedin or github, run: \n     cd linkedin \n or \n     cd github",
-        "linkedin": "<a href ='https://github.com/simplicity0308' target='blank'>Click Me</a>",
-        "github": "<a href ='https://github.com/simplicity0308' target='blank'>Click Me</a>",
-        "projects": "<a href='../views/projects.html' target='blank'>Click Me</a>",
-        "suisei": "<a href ='https://www.youtube.com/watch?v=a51VH9BYzZA' target='blank'>Click Me</a>"
+        "about": "\nHi, I'm Benjamin Choon \n\n I'm a junior full-stack developer currently working in a full-stack role where I'm focused on strengthening my backend skills \n\n and mastering modern frameworks. I'm passionate about building efficient, scalable web applications and continuously learning new \n\n technologies to improve my productivity and value as a developer. \n\n\n To contact me, please run: \n      cd contact \n\n Or click here: <a href=\"#about\">Open About Me</a> \n",
+        "contact": "\nEmail: <a href=\"mailto:benjaminchoon03@gmail.com\">benjaminchoon03@gmail.com</a> \n\n To find me on linkedin or github, run: \n     cd linkedin \n or \n     cd github \n\n Or click here: <a href=\"#contact\">Open Contact Window</a>\n",
+        "linkedin": "\n<a href ='https://github.com/simplicity0308' target='blank'>Click Me</a>\n",
+        "github": "\n<a href ='https://github.com/simplicity0308' target='blank'>Click Me</a>\n",
+        "projects": "\n<a href='../views/projects.html' target='blank'>Click Me</a> \n\n Or click here: <a href=\"#projects\">Open Projects Window</a>\n",
+        "suisei": "\n<a href ='https://www.youtube.com/watch?v=a51VH9BYzZA' target='blank'>Click Me</a>\n"
     },
-    "ls": "about\n\ncontact\n\nlinkedin\n\ngithub\n\nprojects\n\nsuisei"
+    "ls": "\nabout\n\ncontact\n\nlinkedin\n\ngithub\n\nprojects\n\nsuisei\n"
 }
 
 

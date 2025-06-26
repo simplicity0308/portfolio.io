@@ -1,16 +1,22 @@
 const input = document.getElementById('cli-input');
 const output = document.getElementById('output');
+const hint = document.querySelector(".cli-hint");
 let presentDir = "home/benjamin";
 let hintHidden = false;
-const hint = document.querySelector(".cli-hint");
+
+// overlay
+const overlays = {
+  about: document.getElementById('about-overlay'),
+  contact: document.getElementById('contact-overlay'),
+  projects: document.getElementById('projects-overlay')
+};
 
 let jsonData = {}
 
+// json 
 fetch('../assets/text/data.json')
   .then(res => {
-    if (!res.ok) {
-      throw new Error(`HTTP error! Status: ${res.status}`);
-    }
+    if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
     return res.json();
   })
   .then(data => {
@@ -90,67 +96,116 @@ const commands = {
 };
 
 function processCommand(command) {
-
-    // display original command
+    // show prev command
     const line = document.createElement("pre");
-    line.textContent = "[portfolio@benjamin ~]$ " + command ;
+    line.className = "terminal-text";
+    line.textContent = "[portfolio@benjamin ~]$ " + command;
     output.appendChild(line);
+    scrollToBottom();
 
-    // parse input
+    // parse command
     const splitCommand = command.split(" ");
     const commandPrefix = splitCommand[0];
     const args = splitCommand.slice(1);
 
-    // command execution
     let responseText = "";
     if (commands[commandPrefix]) {
         responseText = commands[commandPrefix](args);
+        scrollToBottom();
     } else {
         responseText = "-bash: " + commandPrefix + ": command not found";
+        scrollToBottom();
     }
 
-    // display response
+    // show response
     if (responseText) {
         const response = document.createElement("pre");
+        response.className = "terminal-text";
         response.innerHTML = responseText;
         output.appendChild(response);
+        scrollToBottom();
     }
 
-    setTimeout(() => {
-        output.scrollTop = output.scrollHeight;
-    }, 0);
+    scrollToBottom();
 }
 
+// scroll to bottom after each command
+function scrollToBottom() {
+    setTimeout(() => {
+        output.scrollTop = output.scrollHeight;
+    }, 10);
+}
 
-
-
-
-//overlay
+// welcome message when page loads
 document.addEventListener('DOMContentLoaded', function() {
+  const welcomeMessage = document.createElement("pre");
+  welcomeMessage.className = "terminal-text";
+  welcomeMessage.innerHTML = `Welcome to Portfolio OS [Version 2025.03.08]
+(c) 2025 Benjamin Choon. All rights reserved.
+SUI-CHAN WAAAAAA KYOU MOU KAWAIIIIIIII
+
+Type 'help' to see available commands.
+`;
+  output.appendChild(welcomeMessage);
+  scrollToBottom();
+});
+
+// click handler in cli
+output.addEventListener('click', function(event) {
+  // check if a link was clicked
+  if (event.target.tagName === 'A') {
+    const href = event.target.getAttribute('href');
+    
+    // check if this is an overlay trigger
+    if (href === '#about') {
+      event.preventDefault();
+      showOverlay('about');
+    } else if (href === '#contact') {
+      event.preventDefault();
+      showOverlay('contact');
+    } else if (href === '#projects') {
+      event.preventDefault();
+      showOverlay('projects');
+    }
+  }
+});
+
+// show a specific overlay
+function showOverlay(type) {
+  // hide overlays 
+  Object.values(overlays).forEach(overlay => {
+    if (overlay) overlay.style.display = 'none';
+  });
+  // show the requested overlay
+  if (overlays[type]) {
+    overlays[type].style.display = 'block';
+  }
   
-  const overlays = {
-    about: document.getElementById('about-overlay'),
-    contact: document.getElementById('contact-overlay'),
-    // projects: document.getElementById('projects-overlay')
-  };
+  scrollToBottom();
+}
+
+// setup overlays
+document.addEventListener('DOMContentLoaded', function() {
+  // update overlays references once DOM is loaded
+  Object.keys(overlays).forEach(key => {
+    overlays[key] = document.getElementById(`${key}-overlay`);
+  });
   
   const icons = {
     about: document.querySelector('.icon.about'),
     contact: document.querySelector('.icon.contact'),
-    // projects: document.querySelector('.icon.projects')
+    projects: document.querySelector('.icon.projects')
   };
   
   Object.keys(icons).forEach(type => {
     if (icons[type] && overlays[type]) {
-
+      // icon click opens overlay
       icons[type].addEventListener('click', function(e) {
         e.preventDefault();
-        Object.values(overlays).forEach(overlay => {
-          if (overlay) overlay.style.display = 'none';
-        });
-        overlays[type].style.display = 'block';
+        showOverlay(type);
       });
       
+      // close button closes overlay
       const closeBtn = overlays[type].querySelector('.control.close');
       if (closeBtn) {
         closeBtn.addEventListener('click', function() {
@@ -158,6 +213,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       }
       
+      // click outside overlay closes it
       overlays[type].addEventListener('click', function(event) {
         if (event.target === overlays[type]) {
           overlays[type].style.display = 'none';
@@ -166,6 +222,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // ESC key closes any open overlay
   document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
       Object.values(overlays).forEach(overlay => {
@@ -176,3 +233,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+// scrolling after window resize
+window.addEventListener('resize', scrollToBottom);
